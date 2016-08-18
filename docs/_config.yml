@@ -1,0 +1,16 @@
+name: PhantomJS
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+# root URL for editing pages on GitHub (remember trailing slash)
+githubEdit: https://github.com/ariya/phantomjs/edit/gh-pages/
+
+# When pushing to GitHub
+url: http://phantomjs.org
+
+# When Developing Locally
+# url: http://localhost:4000

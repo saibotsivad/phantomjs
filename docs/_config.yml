@@ -7,7 +7,7 @@ kramdown:
   syntax_highlighter: rouge
 
 # root URL for editing pages on GitHub (remember trailing slash)
-githubEdit: https://github.com/ariya/phantomjs/edit/gh-pages/
+githubEdit: https://github.com/ariya/phantomjs/edit/master/docs/
 
 # When pushing to GitHub
 url: http://phantomjs.org

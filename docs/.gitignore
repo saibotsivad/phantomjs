@@ -3,9 +3,11 @@
 # vim temp files
 *.swp
 
-# jekyll docs site
+# jekyll files
 _site
+.jekyll-metadata
+.sass-cache
 
-/.sass-cache/
+# sublime
 /phantomjs.sublime-project
 /phantomjs.sublime-workspace

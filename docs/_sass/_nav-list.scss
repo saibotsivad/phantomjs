@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+.nav-list-group {
+  margin-bottom: 0.5em;
+}
+
 .nav-item-label {
   border:1px solid #DDD;
   display: inline-block;
@@ -42,8 +46,4 @@
 .current > .nav-item-name {
   font-weight:bold;
   color:#C00
-}
-
-.nav-group-end {
-  margin-bottom: 0.5em;
 }

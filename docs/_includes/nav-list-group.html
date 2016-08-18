@@ -1,6 +1,5 @@
-{% if category_items %}
-  {% for post in category_items reversed sort_by:title %}
-
+{% for post in site[page.collection] sort_by:title %}
+{% if post.kind == kind and post.section == page.section %}
   {% assign current_class = nil %}
   {% assign last_item_class = nil %}
 
@@ -8,11 +7,7 @@
     {% assign current_class = ' current' %}
   {% endif %}
 
-  {% if forloop.last %}
-    {% assign last_item_class = ' nav-group-end' %}
-  {% endif %}
-
-  <li class="nav-item nav-item-{{ kind }}{{ current_class }}{{ last_item_class }}">
+  <li class="nav-item nav-item-{{ kind }}{{ current_class }}">
     <span class="nav-item-label">{{ kind_key }}</span>
     {% if current_class == nil %}
     <a href="{{ site.url }}{{ post.url }}" class="nav-item-name">{{ post.title }}</a>
@@ -20,5 +15,5 @@
     <span class="nav-item-name">{{ post.title }}</span>
     {% endif %}
   </li>
-  {% endfor %}
 {% endif %}
+{% endfor %}

@@ -14,53 +14,40 @@
 
 {% else %}
 
-  {% assign category_name = 'phantom' %}
-  {% assign category_label = 'phantom Object' %}
-  {% assign category_properties = site.categories.phantom-property %}
-  {% assign category_methods = site.categories.phantom-method %}
-  {% assign category_handlers = site.categories.phantom-handler %}
-  {% include nav-module.html %}
+  <div class="nav-up">
+    &#8810; <a href="{{ site.url }}/api/">API</a>
+  </div>
 
-  {% assign category_name = 'webpage' %}
-  {% assign category_label = 'Web Page Module' %}
-  {% assign category_properties = site.categories.webpage-property %}
-  {% assign category_methods = site.categories.webpage-method %}
-  {% assign category_handlers = site.categories.webpage-handler %}
-  {% include nav-module.html %}
+  <h2 class="nav-title">
+    {% if page.kind %}
+      &#8810; <a href="{{ site.url }}/api/{{ page.section }}" class="nav-title">{{ site.sectionTitles[page.section] }}</a>
+    {% else %}
+      {{ site.sectionTitles[page.section] }}
+    {% endif %}
+  </h2>
 
-  {% assign category_name = 'child_process' %}
-  {% assign category_label = 'Child Process Module' %}
-  {% assign category_properties = site.categories.child_process-property %}
-  {% assign category_methods = site.categories.child_process-method %}
-  {% assign category_handlers = site.categories.child_process-handler %}
-  {% include nav-module.html %}
+  <ul class="nav-list-group">
+    {% assign kind = 'doc' %}
+    {% assign kind_key = 'D' %}
+    {% include nav-list-group.html %}
+  </ul>
 
-  {% assign category_name = 'fs' %}
-  {% assign category_label = 'File System Module' %}
-  {% assign category_properties = site.categories.fs-property %}
-  {% assign category_methods = site.categories.fs-method %}
-  {% assign category_handlers = site.categories.fs-handler %}
-  {% include nav-module.html %}
+  <ul class="nav-list-group">
+    {% assign kind = 'property' %}
+    {% assign kind_key = 'P' %}
+    {% include nav-list-group.html %}
+  </ul>
 
-  {% assign category_name = 'stream' %}
-  {% assign category_label = 'Stream Objects' %}
-  {% assign category_properties = site.categories.stream-property %}
-  {% assign category_methods = site.categories.stream-method %}
-  {% assign category_handlers = site.categories.stream-handler %}
-  {% include nav-module.html %}
+  <ul class="nav-list-group">
+    {% assign kind = 'method' %}
+    {% assign kind_key = 'M' %}
+    {% include nav-list-group.html %}
+  </ul>
 
-  {% assign category_name = 'system' %}
-  {% assign category_label = 'System Module' %}
-  {% assign category_properties = site.categories.system-property %}
-  {% assign category_methods = site.categories.system-method %}
-  {% assign category_handlers = site.categories.system-handler %}
-  {% include nav-module.html %}
-
-  {% assign category_name = 'webserver' %}
-  {% assign category_label = 'Web Server Module' %}
-  {% assign category_properties = site.categories.webserver-property %}
-  {% assign category_methods = site.categories.webserver-method %}
-  {% assign category_handlers = site.categories.webserver-handler %}
-  {% include nav-module.html %}
+  <ul class="nav-list-group">
+    {% assign kind = 'handler' %}
+    {% assign kind_key = 'H' %}
+    {% include nav-list-group.html %}
+  </ul>
 
 {% endif %}

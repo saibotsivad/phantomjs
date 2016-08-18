@@ -13,4 +13,17 @@ githubEdit: https://github.com/ariya/phantomjs/edit/master/docs/
 url: http://phantomjs.org
 
 # When Developing Locally
-# url: http://localhost:4000
+#url: http://localhost:4000
+
+collections:
+  api:
+    output: true
+
+sectionTitles:
+  webpage: Web Page Module
+  phantom: phantom Object
+  child_process: Child Process Module
+  fs: File System Module
+  stream: Stream Objects
+  system: System Module
+  webserver: Web Server Module
